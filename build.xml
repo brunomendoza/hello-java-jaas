@@ -1,0 +1,14 @@
+<project name="hello-jaas" default="compile">
+    <property name="source.dir" value="main" />
+    <property name="build.dir" value="build" />
+    <property name="classes.dir" value="${build.dir}/classes" />
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${classes.dir}" />
+        <javac srcdir="${source.dir}" destdir="${classes.dir}" />
+    </target>
+</project>
